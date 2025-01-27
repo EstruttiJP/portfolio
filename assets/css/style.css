@@ -1,5 +1,3 @@
-@import "../../node_modules/aos/dist/aos.css";
-
 body {
     overflow-x: hidden;
 }
@@ -50,7 +48,7 @@ body {
 }
 
 #header.push {
-    transform: translateX(-250px); /* Ajuste a distância conforme necessário */
+    transform: translateX(-170px); /* Ajuste a distância conforme necessário */
 }
 
 
