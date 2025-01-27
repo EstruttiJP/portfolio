@@ -1,0 +1,112 @@
+@import "../../node_modules/aos/dist/aos.css";
+
+body {
+    overflow-x: hidden;
+}
+
+.text-cian {
+    color: #90e5e6;
+}
+
+.font-one {
+    font-family: 'Arial', sans-serif;
+}
+
+.font-two {
+    font-family: 'Times New Roman', serif;
+}
+
+.hidden-up {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.shown-down {
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#sidebar {
+    z-index: 40; /* Certifique-se de que a barra lateral esteja acima do conteúdo */
+    transform: translateX(100%); /* Inicialmente fora da tela à direita */
+    transition: transform 0.3s ease-out; /* Transição suave */
+}
+#sidebar.open {
+    transform: translateX(0); /* Barra lateral visível */
+}
+
+/* Animação para o header */
+#header {
+    z-index: 50;
+}
+
+#header.push {
+    transform: translateX(-250px); /* Ajuste a distância conforme necessário */
+}
+
+
+/* Animação das linhas do botão */
+#menu-button div {
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#menu-button div.rotate-45 {
+    transform: rotate(45deg) translateY(10px);
+}
+
+#menu-button div.-rotate-45 {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+#menu-button div.opacity-0 {
+    opacity: 0;
+}
+
+.github-link,
+.instagram-link,
+.gmail-link {
+    border-radius: 12px;
+    transition: .3s;
+}
+
+
+.github-link {
+    background-color: #333;
+}
+
+.gmail-link {
+    background-color: #d14836;
+}
+
+.instagram-link {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.github-link:hover {
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.8);
+    transform: scale(1.05);
+}
+
+.gmail-link:hover {
+    box-shadow: 0 0 15px rgba(209, 72, 54, 0.8);
+    transform: scale(1.05);
+}
+
+.instagram-link:hover {
+    box-shadow: 0 0 15px rgba(193, 53, 132, 0.8);
+    transform: scale(1.05);
+}
+
+.carousel-item {
+    min-width: 100vw;
+    min-height: 100vh;
+}
