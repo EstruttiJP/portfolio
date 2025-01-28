@@ -48,7 +48,7 @@ body {
 }
 
 #header.push {
-    transform: translateX(-170px); /* Ajuste a distância conforme necessário */
+    transform: translateX(-150px); /* Ajuste a distância conforme necessário */
 }
 
 
@@ -71,11 +71,20 @@ body {
 
 .github-link,
 .instagram-link,
-.gmail-link {
+.gmail-link,
+.linkedin-link {
     border-radius: 12px;
     transition: .3s;
 }
 
+.linkedin-link {
+    background-color: #0077B5; /* Cor padrão do LinkedIn */
+}
+
+.linkedin-link:hover {
+    box-shadow: 0 0 15px rgba(0, 119, 181, 0.8);
+    transform: scale(1.05);
+}
 
 .github-link {
     background-color: #333;
