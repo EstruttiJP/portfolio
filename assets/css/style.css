@@ -15,7 +15,7 @@ body {
 }
 
 .hidden-up {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     transition: transform 0.3s ease-out;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 #header.push {
-    transform: translateX(-150px); /* Ajuste a distância conforme necessário */
+    transform: translateX(-180px); /* Ajuste a distância conforme necessário */
 }
 
 
@@ -120,4 +120,12 @@ body {
 
 .carousel{
     overflow-x: hidden;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.seta{
+    font-size: 1.5rem;
 }

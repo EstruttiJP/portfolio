@@ -15,20 +15,21 @@
 
 <body class="bg-black">
     <script src="assets/js/animations.js"></script>
+    <!-- Header -->
+    <header id="header"
+        class="fixed top-5 right-0 min-w-fit max-w-full flex items-center justify-end p-2 lg:p-6 xl:p-7 transition-all duration-300 ease-in-out">
+        <div class="flex items-center">
+            <img src="assets/imgs/verificado.svg" alt="" class="w-12">
+            <span class="text-xl font-one text-pink-200 font-semibold">Estrutti JP</span>
+            <button id="menu-button" class="z-20 p-2 ml-2">
+                <div id="line1" class="h-1 w-6 bg-pink-200 transition-all"></div>
+                <div id="line2" class="h-1 w-6 bg-pink-200 mt-1 transition-all"></div>
+                <div id="line3" class="h-1 w-6 bg-pink-200 mt-1 transition-all"></div>
+            </button>
+        </div>
+    </header>
     <!-- Section: Home -->
-    <section class="font-one flex items-center justify-center min-h-screen">
-        <!-- Header -->
-        <header id="header" class="fixed top-5 right-0 w-full flex items-center justify-end p-5">
-            <div class="flex items-center">
-                <img src="assets/imgs/verificado.svg" alt="" srcset="" class="w-14">
-                <span class="text-2xl font-one text-pink-200 font-semibold">Estrutti JP</span>
-                <button id="menu-button" class="z-20 p-2 ml-2">
-                    <div id="line1" class="h-1 w-8 bg-pink-200 transition-all"></div>
-                    <div id="line2" class="h-1 w-8 bg-pink-200 mt-1 transition-all"></div>
-                    <div id="line3" class="h-1 w-8 bg-pink-200 mt-1 transition-all"></div>
-                </button>
-            </div>
-        </header>
+    <section id="home" class="font-one flex items-center justify-center min-h-screen">
         <!-- Barra lateral -->
         <aside id="sidebar"
             class="fixed top-0 right-0 min-h-screen flex flex-col items-center justify-start p-5 text-white bg-gray-800 translate-x-full transition-transform duration-300">
@@ -286,7 +287,8 @@
                         <img src="assets/imgs/spring.svg" alt="" class="w-36" data-aos="fade-right"
                             data-aos-duration="1000">
                     </div>
-                    <p class="text-xl m-8 w-2/3 md:w-1/2 text-center" data-aos="fade-up" data-aos-duration="1000">Tenho diversos
+                    <p class="text-xl m-8 w-2/3 md:w-1/2 text-center" data-aos="fade-up" data-aos-duration="1000">Tenho
+                        diversos
                         projetos utilizando Angular no frontend e
                         Spring Boot no backend. Destaco o
                         projeto de Library, uma aplicação de gerenciamento de livros que simplifica a organização e
@@ -407,95 +409,139 @@
         </div>
     </section>
     <!-- Section: Minhas Habilidades -->
+    <!-- Section: Minhas Habilidades -->
     <section class="font-one flex flex-col items-center justify-center min-h-screen mt-10">
-        <h2 class="text-cian text-7xl text-center" data-aos="fade-up">Minhas <strong
-                class="tracking-tighter">Habilidades</strong></h2>
-        <p class="text-xl text-white text-center m-8" data-aos="fade-up">Tecnologias, linguagens e ferramentas que
-            domino e utilizo para
-            criar soluções inovadoras.</p>
-        <div class="flex flex-wrap flex-row justify-around align-center" data-aos="fade-up">
+        <h2 class="text-cian text-7xl text-center" data-aos="fade-up">
+            Minhas <strong class="tracking-tighter">Habilidades</strong>
+        </h2>
+        <p class="text-xl text-white text-center m-8" data-aos="fade-up">
+            Tecnologias, linguagens e ferramentas que domino e utilizo para criar soluções inovadoras.
+        </p>
+        <div class="flex flex-wrap flex-row justify-around items-start w-full max-w-7xl" data-aos="fade-up">
+            <!-- Card Front-end -->
             <div
-                class="flex flex-col justify-start items-center bg-indigo-100 rounded-lg p-5 text-gray-800 m-2 transform transition-transform hover:-translate-y-2">
+                class="habilidade-card flex flex-col items-center bg-indigo-100 rounded-lg p-3 text-gray-800 m-1 cursor-pointer transition-all duration-300 ease-in-out w-72">
                 <div class="flex justify-center items-center">
-                    <img src="assets/imgs/front-end.png" alt="" class="w-16">
+                    <img src="assets/imgs/front-end.png" alt="Front-end" class="w-16">
                     <p class="font-semibold text-2xl ml-5">Front-end</p>
+                    <!-- Ícone de Seta -->
+                    <ion-icon name="chevron-down-outline"
+                        class="seta ml-2 transition-transform duration-300 ease-in-out"></ion-icon>
                 </div>
-                <ul class="list-inside mt-3 text-xl font-medium space-y-2">
-                    <li class="flex items-center justify-start"><img src="assets/imgs/HTML5.png" alt=""
-                            class="w-8 mr-2">- HTML</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/css.png" alt="" class="w-8 mr-2">-
-                        CSS</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/JavaScript-logo.png" alt=""
-                            class="w-8 mr-2">- JS</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/Typescript.png" alt=""
-                            class="w-8 mr-2">- TS</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/angular.svg" alt=""
-                            class="w-8 mr-2">- Angular</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/React.png" alt=""
-                            class="w-8 mr-2">- React</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/bootstrap-logo.svg" alt=""
-                            class="w-8 mr-2">- Bootstrap</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/tailwind.svg" alt=""
-                            class="w-8 mr-2">- Tailwind</li>
+                <!-- Conteúdo oculto inicialmente -->
+                <ul
+                    class="conteudo list-inside mt-3 text-xl font-medium space-y-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <li class="flex items-center">
+                        <img src="assets/imgs/HTML5.png" alt="HTML" class="w-8 mr-2">HTML
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/css.png" alt="CSS" class="w-8 mr-2">CSS
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/JavaScript-logo.png" alt="JavaScript" class="w-8 mr-2">JavaScript
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/Typescript.png" alt="TypeScript" class="w-8 mr-2">TypeScript
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/angular.svg" alt="Angular" class="w-8 mr-2">Angular
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/React.png" alt="React" class="w-8 mr-2">React
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/bootstrap-logo.svg" alt="Bootstrap" class="w-8 mr-2">Bootstrap
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/tailwind.svg" alt="Tailwind CSS" class="w-8 mr-2">Tailwind CSS
+                    </li>
                 </ul>
             </div>
+
+            <!-- Card Back-end -->
             <div
-                class="flex flex-col justify-start items-center bg-indigo-200 rounded-lg p-5 text-gray-900 m-2 transform transition-transform hover:-translate-y-2">
+                class="habilidade-card flex flex-col items-center bg-indigo-200 rounded-lg p-3 text-gray-900 m-1 cursor-pointer transition-all duration-300 ease-in-out w-72">
                 <div class="flex justify-center items-center">
-                    <img src="assets/imgs/back-end.png" alt="" class="w-16">
+                    <img src="assets/imgs/back-end.png" alt="Back-end" class="w-16">
                     <p class="font-semibold text-2xl ml-5">Back-end</p>
+                    <ion-icon name="chevron-down-outline"
+                        class="seta ml-2 transition-transform duration-300 ease-in-out"></ion-icon>
                 </div>
-                <ul class="list-inside mt-3 text-xl font-medium space-y-2">
-                    <li class="flex items-center justify-start"><img src="assets/imgs/php.svg" alt=""
-                            class="w-10 mr-2">- PHP</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/Java.png" alt=""
-                            class="w-8 mr-2">- Java</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/Python.png" alt=""
-                            class="w-8 mr-2">- Python</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/spring.svg" alt=""
-                            class="w-8 mr-2">- Spring Boot</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/laravel.svg" alt=""
-                            class="w-8 mr-2">- Laravel</li>
+                <ul
+                    class="conteudo list-inside mt-3 text-xl font-medium space-y-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <li class="flex items-center">
+                        <img src="assets/imgs/php.svg" alt="PHP" class="w-10 mr-2">PHP
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/Java.png" alt="Java" class="w-8 mr-2">Java
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/Python.png" alt="Python" class="w-8 mr-2">Python
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/spring.svg" alt="Spring Boot" class="w-8 mr-2">Spring Boot
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/laravel.svg" alt="Laravel" class="w-8 mr-2">Laravel
+                    </li>
                 </ul>
             </div>
+
+            <!-- Card Database -->
             <div
-                class="flex flex-col justify-start items-center bg-indigo-100 rounded-lg p-5 text-black m-2 transform transition-transform hover:-translate-y-2">
+                class="habilidade-card flex flex-col items-center bg-indigo-100 rounded-lg p-3 text-black m-1 cursor-pointer transition-all duration-300 ease-in-out w-72">
                 <div class="flex justify-center items-center">
-                    <img src="assets/imgs/database.png" alt="" class="w-16">
+                    <img src="assets/imgs/database.png" alt="Database" class="w-16">
                     <p class="font-semibold text-2xl ml-5">Database</p>
+                    <ion-icon name="chevron-down-outline"
+                        class="seta ml-2 transition-transform duration-300 ease-in-out"></ion-icon>
                 </div>
-                <ul class="list-inside mt-3 text-xl font-medium space-y-2">
-                    <li class="flex items-center justify-start"><img src="assets/imgs/postgreSQL.png" alt=""
-                            class="w-8 mr-2">- PostgreSQL</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/mysql.png" alt=""
-                            class="w-10 mr-2">- MySQL</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/mongodb.svg" alt="" class="w-8">-
-                        MongoDB</li>
+                <ul
+                    class="conteudo list-inside mt-3 text-xl font-medium space-y-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <li class="flex items-center">
+                        <img src="assets/imgs/postgreSQL.png" alt="PostgreSQL" class="w-8 mr-2">PostgreSQL
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/mysql.png" alt="MySQL" class="w-10 mr-2">MySQL
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/mongodb.svg" alt="MongoDB" class="w-8 mr-2">MongoDB
+                    </li>
                 </ul>
             </div>
+
+            <!-- Card DevOps -->
             <div
-                class="flex flex-col justify-start items-center bg-indigo-200 rounded-lg p-5 text-black m-2 transform transition-transform hover:-translate-y-2">
+                class="habilidade-card flex flex-col items-center bg-indigo-200 rounded-lg p-3 text-black m-1 cursor-pointer transition-all duration-300 ease-in-out w-72">
                 <div class="flex justify-center items-center">
-                    <img src="assets/imgs/devOps.png" alt="" class="w-16">
+                    <img src="assets/imgs/devOps.png" alt="DevOps" class="w-16">
                     <p class="font-semibold text-2xl ml-5">DevOps</p>
+                    <ion-icon name="chevron-down-outline"
+                        class="seta ml-2 transition-transform duration-300 ease-in-out"></ion-icon>
                 </div>
-                <ul class="list-inside mt-3 text-xl font-medium space-y-2">
-                    <li class="flex items-center justify-start"><img src="assets/imgs/docker.png" alt=""
-                            class="w-8 mr-2">- Docker</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/docker-swarm.png" alt=""
-                            class="w-8 mr-2">- Docker Swarm</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/kubernetes.png" alt=""
-                            class="w-8 mr-2">- Kubernetes</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/AWS.png" alt=""
-                            class="w-10 mr-2">- AWS</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/ci-cd.png" alt=""
-                            class="w-8 mr-2">- CI/CD</li>
-                    <li class="flex items-center justify-start"><img src="assets/imgs/Linux.png" alt=""
-                            class="w-8 mr-2">- Linux</li>
+                <ul
+                    class="conteudo list-inside mt-3 text-xl font-medium space-y-2 overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                    <li class="flex items-center">
+                        <img src="assets/imgs/docker.png" alt="Docker" class="w-8 mr-2">Docker
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/kubernetes.png" alt="Kubernetes" class="w-8 mr-2">Kubernetes
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/AWS.png" alt="AWS" class="w-10 mr-2">AWS
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/ci-cd.png" alt="CI/CD" class="w-8 mr-2">CI/CD
+                    </li>
+                    <li class="flex items-center">
+                        <img src="assets/imgs/Linux.png" alt="Linux" class="w-8 mr-2">Linux
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
+    <!-- Script para interatividade -->
+    <script src="assets/js/skills.js"></script>
     <!-- Section: Certificados -->
     <section class="flex flex-col items-center justify-center min-h-screen mt-14">
         <h2 class="text-white text-6xl md:text-8xl mb-5 tracking-tighter pl-4">Meus <strong>Certificados</strong></h2>
@@ -524,12 +570,12 @@
         <div class="flex flex-col items-center justify-center w-full h-full mx-auto text-cian p-6" data-aos="fade-right"
             data-aos-duration="2000">
             <div class="text-6xl md:text-9xl font-one text-center">
-                Revolucione sua 
+                Revolucione sua
             </div>
             <div class="text-6xl md:text-9xl font-two text-center">
                 Presença <strong>Online Agora!</strong>
             </div>
-            
+
         </div>
 
         <!-- Contatos -->
