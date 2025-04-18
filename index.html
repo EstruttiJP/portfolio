@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrutti JP - Portfolio</title>
-    <link rel="shortcut icon" href="assets/imgs/devOps.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
@@ -61,7 +61,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-estrutti/" class="linkedin-link flex items-center px-4 py-2 w-full mt-4">
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-estrutti/"
+                        class="linkedin-link flex items-center px-4 py-2 w-full mt-4">
                         <ion-icon name="logo-linkedin" class="text-2xl" style="margin-right: 5px;"></ion-icon>
                         <span>Linkedin</span>
                     </a>
@@ -206,6 +207,7 @@
         <h2 class="text-7xl text-cian mb-10 pl-8" data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">
             Meus <strong>Projetos</strong>
         </h2>
+        <p class="text-xl text-white m-8" data-aos="fade-up">Clique nas setas para visualizar outros projetos!</p>
         <div x-data="carousel()" class="carousel relative">
             <div class="carousel-inner flex transition-transform duration-500 w-full h-full"
                 :style="'transform: translateX(-' + currentIndex * 100 + 'vw);'">
@@ -402,10 +404,12 @@
                     </div>
                 </div>
             </div>
-            <div class="z-50 carousel-control-prev absolute top-1/2 transform -translate-y-1/2 left-4 bg-gray-800 text-white px-2 py-1 cursor-pointer rounded"
+            <div class="z-50 carousel-control-prev absolute top-1/2 transform -translate-y-1/2 left-4 bg-gray-900/80 text-white text-3xl font-bold px-3 py-2 cursor-pointer rounded-full shadow-lg transition-all duration-300 hover:bg-blue-600 hover:scale-110 hover:shadow-xl"
                 @click="prevSlide()">&#10094;</div>
-            <div class="z-50 carousel-control-next absolute top-1/2 transform -translate-y-1/2 right-4 bg-gray-800 text-white px-2 py-1 cursor-pointer rounded"
+
+            <div class="z-50 carousel-control-next absolute top-1/2 transform -translate-y-1/2 right-4 bg-gray-900/80 text-white text-3xl font-bold px-3 py-2 cursor-pointer rounded-full shadow-lg transition-all duration-300 hover:bg-blue-600 hover:scale-110 hover:shadow-xl"
                 @click="nextSlide()">&#10095;</div>
+
         </div>
     </section>
     <!-- Section: Minhas Habilidades -->
